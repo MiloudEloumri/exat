@@ -4,9 +4,9 @@ erl -pa examples/mobile_agent -pa ebin/ -pa lib/*/ebin/ -pa ../../ebin/ -boot st
     -s exat_app \
     -http_port 7779 \
     -config examples/mobile_agent/mobility \
-    -m_tcp_port 1806 \
+    -m_tcp_port 1805 \
+    -name b@192.168.1.100 \
+    -setcookie ABCD \
     -start mobile_pingeragent $*
-    #-sname b
-
     # -eval "t:t(agent)." \
     # -eval "t:t(simple_pingeragent)." \

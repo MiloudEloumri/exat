@@ -15,9 +15,9 @@
 
 start() ->
     application:start(gproc),
-    application:start(proc_mobility),
-    agent:new(agent:full_local_name("pingeragent"), ?MODULE,
-              [{"localhost", 7778, <<"pingagent@a:michal">>}]).
+    application:start(proc_mobility).
+    %%agent:new(agent:full_local_name("pingeragent"), ?MODULE,
+    %%          [{"192.168.1.101", 7778, <<"pingagent@a:192.168.1.101">>}]).
 
 stop() -> agent:stop(agent:full_local_name("pingeragent")).
 
